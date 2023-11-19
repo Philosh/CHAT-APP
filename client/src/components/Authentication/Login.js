@@ -16,7 +16,7 @@ const Login = () => {
   const [show, setShow] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState();
+  const [loading, setLoading] = useState(false);
   const toast = useToast();
   const navigate = useNavigate();
 
@@ -65,7 +65,7 @@ const Login = () => {
       console.log(error);
       toast({
         title: "Error Occurred!",
-        description: error.response,
+        description: error.response.data.message,
         status: "error",
         duration: 5000,
         isClosable: true,
