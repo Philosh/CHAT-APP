@@ -26,10 +26,14 @@ const HomePage = () => {
         borderWidth="1px"
       >
         <Text textAlign="center" fontSize="4xl" fontFamily="Work Sans">
-          Tete a Tete
+          Tete a Tete <br></br> (A Chat Application)
         </Text>
       </Box>
       <Box bg="white" w="100%" p={4} borderRadius="1g" borderWidth="1px">
+        <Text textAlign="center" fontSize="1xl" textStyle="h1">
+          Create a user or <br></br> Login as a guest<br></br>
+          <br></br>
+        </Text>
         <Tabs variant="soft-rounded">
           <TabList mb="1em">
             <Tab width="50%">Login</Tab>
