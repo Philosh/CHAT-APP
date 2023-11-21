@@ -259,7 +259,7 @@ const UpdateGroupChatModel = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
             </FormControl>
             <FormControl display="flex">
               <Input
-                placeholder="Add a use to the group"
+                placeholder="Add a user to the group"
                 mb={3}
                 onChange={(e) => handleSearch(e.target.value)}
               ></Input>
