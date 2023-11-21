@@ -1,4 +1,5 @@
 import { useState, React } from "react";
+import { ChatState } from "../../Context/ChatProvider";
 import {
   Button,
   FormControl,
@@ -19,6 +20,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const toast = useToast();
   const navigate = useNavigate();
+  const { setUser } = ChatState();
 
   const handleClick = () => setShow(!show);
 
@@ -59,6 +61,7 @@ const Login = () => {
       });
 
       localStorage.setItem("userInfo", JSON.stringify(data));
+      setUser(data);
       setLoading(false);
       navigate("/chats");
     } catch (error) {

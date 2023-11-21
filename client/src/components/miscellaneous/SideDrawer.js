@@ -48,6 +48,7 @@ const SideDrawer = () => {
   const logoutHandler = () => {
     localStorage.removeItem("userInfo");
     navigate("/");
+    navigate(0);
   };
 
   const toast = useToast();
